@@ -9,7 +9,7 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 pt-12 px-16">
+    <header className="fixed top-0 left-0 right-0 z-50 pt-16 px-16">
       <nav className="flex justify-center">
         <ul className="flex items-center justify-between max-w-[400px] w-full text-white text-xs font-semibold tracking-wide">
           <li>
