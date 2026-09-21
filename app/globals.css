@@ -4,10 +4,12 @@
   --font-syne: var(--font-syne);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 }
 
 html {
@@ -30,4 +32,24 @@ body {
 
 .scroll-section {
   scroll-snap-align: start;
+}
+
+/* Background image filmstrip */
+.bg-slider-track {
+  animation: bg-slide 40s linear infinite;
+}
+
+@keyframes bg-slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Dissolve page transition (e.g. home -> about) */
+::view-transition-old(page),
+::view-transition-new(page) {
+  animation-duration: 800ms;
 }
